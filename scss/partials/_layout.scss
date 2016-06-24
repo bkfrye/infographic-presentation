@@ -1,0 +1,55 @@
+// breakpoints
+
+$S:     480px;   
+$M:     768px;
+$L:     1100px;
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; }
+  }
+}
+
+//breakpoints & media query mixins
+$phone-width: 640px;
+$tablet-width: 840px;
+$desktop-width: 1024px;
+$large-desktop-width: 1280px;
+
+@mixin phone {
+  @media (max-width: #{$phone-width} - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet-width} + 1px) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
