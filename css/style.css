@@ -7,6 +7,12 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
+svg {
+  height: 60px;
+  width: auto;
+  margin-top: 2em;
+  fill: white; }
+
 /* --------------------------------
 
 Primary style
@@ -196,6 +202,7 @@ Slide Content
                 box-shadow: 0 6px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
         -webkit-border-radius: inherit;
                 border-radius: inherit;
+        padding: 0 5em;
         -webkit-transition: opacity 0.6s;
         transition: opacity 0.6s; }
       .cd-slider-content::after {
@@ -225,7 +232,9 @@ Slide Content
         font-size: 4rem;
         font-weight: 300; }
       .cd-slider-content p {
-        font-weight: bold; } }
+        font-weight: 300;
+        font-size: 24px;
+        color: white; } }
 
 /* --------------------------------
 

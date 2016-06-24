@@ -3,6 +3,7 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 @import 'partials/layout';
+@import 'partials/custom';
 
 /* --------------------------------
 
@@ -231,6 +232,7 @@ Slide Content
 			opacity: 0;
 			box-shadow: 0 6px 40px rgba(#000, .4), inset 0 1px 0 rgba(#fff, .15);
 			border-radius: inherit;
+			padding: 0 5em;
 			@include transition(opacity $animation-duration);
 		}
 
@@ -266,7 +268,9 @@ Slide Content
 		}
 
 		p {
-			font-weight: bold;
+			font-weight: 300;
+			font-size: 24px;
+			color: white;
 		}
 	}
 }
